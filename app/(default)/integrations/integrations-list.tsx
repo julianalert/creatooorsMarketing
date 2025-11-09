@@ -285,11 +285,11 @@ export default function IntegrationsList() {
               <h3 id="engineering" className="scroll-mt-8 text-2xl font-bold inline-flex bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-8">Engineering</h3>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-                {items.map((item, index) => (
-                  item.category === 'Engineering' && (
-                    <IntegrationCard item={item} index={index} />
-                  )
-                ))}
+                {items
+                  .filter((item) => item.category === 'Engineering')
+                  .map((item) => (
+                    <IntegrationCard key={item.name} item={item} />
+                  ))}
 
               </div>
             </div>
@@ -298,11 +298,11 @@ export default function IntegrationsList() {
               <h3 id="nocode" className="scroll-mt-8 text-2xl font-bold inline-flex bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-8">No-code</h3>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-                {items.map((item, index) => (
-                  item.category === 'No-code' && (
-                    <IntegrationCard item={item} index={index} />
-                  )
-                ))}
+                {items
+                  .filter((item) => item.category === 'No-code')
+                  .map((item) => (
+                    <IntegrationCard key={item.name} item={item} />
+                  ))}
 
               </div>
             </div>
@@ -311,11 +311,11 @@ export default function IntegrationsList() {
               <h3 id="collaboration" className="scroll-mt-8 text-2xl font-bold inline-flex bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-8">Collaboration</h3>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-                {items.map((item, index) => (
-                  item.category === 'Collaboration' && (
-                    <IntegrationCard item={item} index={index} />
-                  )
-                ))}
+                {items
+                  .filter((item) => item.category === 'Collaboration')
+                  .map((item) => (
+                    <IntegrationCard key={item.name} item={item} />
+                  ))}
 
               </div>
             </div>
@@ -324,11 +324,11 @@ export default function IntegrationsList() {
               <h3 id="productivity" className="scroll-mt-8 text-2xl font-bold inline-flex bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-8">Productivity</h3>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-                {items.map((item, index) => (
-                  item.category === 'Productivity' && (
-                    <IntegrationCard item={item} index={index} />
-                  )
-                ))}
+                {items
+                  .filter((item) => item.category === 'Productivity')
+                  .map((item) => (
+                    <IntegrationCard key={item.name} item={item} />
+                  ))}
 
               </div>
             </div>
@@ -349,12 +349,11 @@ type CardProps = {
     link: string
     description: string
   }
-  index: number
 }
 
-export function IntegrationCard({ item, index }: CardProps) {
+export function IntegrationCard({ item }: CardProps) {
   return (
-    <div key={index} className="bg-linear-to-tr from-slate-800 to-slate-800/25 rounded-3xl border border-slate-800 hover:border-slate-700/60 transition-colors group relative">
+    <div className="bg-linear-to-tr from-slate-800 to-slate-800/25 rounded-3xl border border-slate-800 hover:border-slate-700/60 transition-colors group relative">
       <div className="flex flex-col p-5 h-full">
         <div className="flex items-center space-x-3 mb-3">
           <div className="relative">
