@@ -4,7 +4,7 @@ import Illustration from '@/public/images/glow-bottom.svg'
 
 export default function Hero() {
   return (
-    <section>
+    <section id="hero">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* Particles animation */}
@@ -25,15 +25,32 @@ export default function Hero() {
               <div className="inline-flex relative before:absolute before:inset-0 before:bg-purple-500 before:blur-md">
                 <a className="btn-sm py-0.5 text-slate-300 hover:text-white transition duration-150 ease-in-out group [background:linear-gradient(var(--color-purple-500),var(--color-purple-500))_padding-box,linear-gradient(var(--color-purple-500),var(--color-purple-200)_75%,transparent_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/50 before:rounded-full before:pointer-events-none shadow-sm" href="#0">
                   <span className="relative inline-flex items-center">
-                    finf creators <span className="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                    alpha 1.0 <span className="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
                   </span>
                 </a>
               </div>
             </div>
-            <h1 className="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4" data-aos="fade-down">The API Security Framework</h1>
-            <p className="text-lg text-slate-300 mb-8" data-aos="fade-down" data-aos-delay="200">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
-            <div className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-down" data-aos-delay="400">
-              <div>
+            <h1 className="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4" data-aos="fade-down">Find the best creators for your brand, instantly
+            </h1>
+            <p className="text-lg text-slate-300 mb-8" data-aos="fade-down" data-aos-delay="200">Our AI scans your brand, your audience, and your style to find the creators most likely to make you go viral.</p>
+            <div className="max-w-md mx-auto sm:max-w-none sm:flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-down" data-aos-delay="400">
+              <form className="w-full sm:w-auto sm:flex sm:items-center sm:space-x-3 space-y-4 sm:space-y-0">
+                <label htmlFor="brand-url" className="sr-only">Brand website</label>
+                <input
+                  id="brand-url"
+                  type="url"
+                  placeholder="Drop your website URL"
+                  className="form-input w-full sm:flex-1 h-12 rounded-full bg-slate-800 text-slate-200 placeholder:text-slate-500 focus:border-purple-500 focus:ring-0 px-5"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="btn h-12 text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full sm:w-auto transition duration-150 ease-in-out group cursor-pointer"
+                >
+                  Find creators <span className="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                </button>
+              </form>
+              {/*<div>
                 <a className="btn text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="#0">
                   Get Started <span className="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
                 </a>
@@ -45,7 +62,7 @@ export default function Hero() {
                   </svg>
                   <span>Read the docs</span>
                 </a>
-              </div>
+              </div> */}
             </div>
 
           </div>
