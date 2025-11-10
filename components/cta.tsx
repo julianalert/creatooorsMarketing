@@ -25,9 +25,8 @@ export default function Cta() {
             <div>
               <div className="inline-flex font-medium bg-clip-text text-transparent bg-linear-to-r from-purple-500 to-purple-200 pb-3">You’ve scrolled enough</div>
             </div>
-            <h2 className="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Your hunt for creators ends here</h2>
-            <p className="text-lg text-slate-400 mb-8">Cure scroll brainrot. Forget the databases.Fire your agency. <br />
-#1 dealer of creators for brands and startups like yours.</p>
+            <h2 className="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">#1 dealer of creators for brands and startups like yours</h2>
+            <p className="text-lg text-slate-400 mb-8">Cure scroll brainrot. Forget the databases. Fire your agency. <br /></p>
             <div>
               <a className="btn text-slate-900 bg-linear-to-r from-white/80 via-white to-white/80 hover:bg-white transition duration-150 ease-in-out group" href="#hero">
                 Start for free <span className="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
