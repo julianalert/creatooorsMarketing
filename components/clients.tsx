@@ -63,7 +63,7 @@ export default function Clients() {
                 {clips.map((clip, index) => (
                   <li key={index}>
                     <video
-                      className="h-36 w-24 rounded-3xl object-cover border border-slate-700/60 shadow-lg shadow-purple-500/10"
+                      className="h-60 w-40 rounded-3xl object-cover border border-slate-700/60 shadow-lg shadow-purple-500/10"
                       src={clip.src}
                       poster={clip.poster}
                       autoPlay
@@ -82,7 +82,7 @@ export default function Clients() {
                 {clips.map((clip, index) => (
                   <li key={index}>
                     <video
-                      className="h-36 w-24 rounded-3xl object-cover border border-slate-700/60 shadow-lg shadow-purple-500/10"
+                      className="h-60 w-40 rounded-3xl object-cover border border-slate-700/60 shadow-lg shadow-purple-500/10"
                       src={clip.src}
                       poster={clip.poster}
                       autoPlay
